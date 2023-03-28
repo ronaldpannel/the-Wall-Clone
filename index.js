@@ -279,12 +279,14 @@ window.addEventListener("load", function () {
   animate();
 
   canvas.addEventListener("click", (e) => {
+    e.preventDefault()
     mouse.x = e.offsetX;
     mouse.y = e.offsetY;
     ballsArray.push(new Ball(canvas.width, canvas.height));
   });
 
-  backToQuizBtn.addEventListener("click", function () {
+  backToQuizBtn.addEventListener("click", function (e) {
+     e.preventDefault();
     gameScoreArray.push(score);
     let result = gameScoreArray.reduce((a, b) => {
       return a + b;

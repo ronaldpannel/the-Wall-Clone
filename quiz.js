@@ -94,7 +94,8 @@ function getResult() {
   cardOfBtn.removeEventListener("click", flipCard);
 }
 
-enterWallBtn.addEventListener("click", function () {
+enterWallBtn.addEventListener("click", function (e) {
+   e.preventDefault();
   if (cardFlipped) {
     quizWrapper.classList.add("inactive");
     cardFlipped = false
