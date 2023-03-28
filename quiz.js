@@ -95,9 +95,9 @@ function getResult() {
 }
 
 enterWallBtn.addEventListener("click", function (e) {
-   e.preventDefault();
+  e.preventDefault();
   if (cardFlipped) {
     quizWrapper.classList.add("inactive");
-    cardFlipped = false
+    cardFlipped = false;
   }
 });
